@@ -3,6 +3,7 @@ package com.lab02.claseview;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,11 +52,10 @@ class Vista extends View {
     }
 
     public void DibujarBarra(Canvas canvas,int peso,int ancho){
-        int alto = canvas.getHeight();
-
         Paint paint = new Paint();
-        paint.setStyle(Paint.Style.STROKE);
+
         paint.setStrokeWidth(5);
+        paint.setColor(Color.BLUE);
         canvas.drawRect(temp1-ancho,alto-alto/3-(peso*10),temp1+ancho,alto-alto/3,paint);
         temp1+=temp2;
 
