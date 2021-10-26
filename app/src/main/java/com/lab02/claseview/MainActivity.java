@@ -34,11 +34,11 @@ class Vista extends View {
     protected void onDraw(Canvas canvas) {
         DibujarBase(canvas);
         cantidad(5);
-        DibujarBarra(canvas,40,20);
-        DibujarBarra(canvas,40,20);
-        DibujarBarra(canvas,40,20);
-        DibujarBarra(canvas,45,20);
-        DibujarBarra(canvas,20,20);
+        DibujarBarra(canvas,17,20, "Hola");
+        DibujarBarra(canvas,32,20, "Jaja");
+        DibujarBarra(canvas,41,20, "Me la pelas");
+        DibujarBarra(canvas,25,20, "pokenei");
+        DibujarBarra(canvas,20,20, "jasd");
     }
 
     public void DibujarBase(Canvas canvas){
@@ -51,12 +51,15 @@ class Vista extends View {
 
     }
 
-    public void DibujarBarra(Canvas canvas,int peso,int ancho){
+    public void DibujarBarra(Canvas canvas,int peso,int ancho,String str){
         Paint paint = new Paint();
 
         paint.setStrokeWidth(5);
         paint.setColor(Color.BLUE);
         canvas.drawRect(temp1-ancho,alto-alto/3-(peso*10),temp1+ancho,alto-alto/3,paint);
+        paint.setColor(Color.BLACK);
+        canvas.drawText(str, temp1-ancho,alto-(alto/3)+50,paint);
+
         temp1+=temp2;
 
     }
