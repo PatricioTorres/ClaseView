@@ -36,7 +36,7 @@ class Vista extends View {
         cantidad(5);
         DibujarBarra(canvas,17,20, "Hola");
         DibujarBarra(canvas,32,20, "Jaja");
-        DibujarBarra(canvas,41,20, "Me la pelas");
+        DibujarBarra(canvas,41,20, "Prueba");
         DibujarBarra(canvas,25,20, "pokenei");
         DibujarBarra(canvas,20,20, "jasd");
     }
